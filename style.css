@@ -1,0 +1,79 @@
+/* makes sizing simpler */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* remove default spacing */
+/* force styling of type through styling, rather than elements */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* min body height */
+
+body {  
+  background-color: darkslategray;
+  color: ivory;
+}
+
+h1 {
+    text-align: center;
+}
+
+.flex-container {
+    display: flex;
+    margin-top: 10px;
+    border: ivory solid 3px;
+    border-radius: 10px;    
+}
+
+.flex-item {
+    font-size: large;    
+    text-align: center;
+    padding-inline: 5px;
+    margin: 3px 5px;    
+    border-radius: 10px;    
+    border: lightskyblue solid 3px;
+}
+
+.flex-container.menu {        
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;    
+    align-items: stretch;    
+    height: 100px;    
+}
+
+.flex-item.menu {             
+    flex-shrink: 1;
+    align-self: flex-start;
+    height: 50px;        
+    font-size: xx-large;   
+}
+
+.flex-item.menu:nth-child(3) {
+    font-size: large;    
+    flex-shrink: 0;
+    align-self: center;
+}
+
+.flex-container.parfaitement-centre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+}
+
+.flex-item.parfaitement-centre {    
+    height: 75px;
+    width: 300px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
